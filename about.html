@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:url" content="https://argroupofinstitution.com/about.html">
+  <link rel="canonical" href="https://argroupofinstitution.com/about.html">
+
+
+  <title>About Us - AR Group Of Institution</title>
+  
+  <!-- Favicon for all browsers and devices -->
+  <link rel="icon" type="image/x-icon" href="images/placeholders/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/placeholders/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/placeholders/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/placeholders/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/placeholders/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/placeholders/android-chrome-512x512.png">
+  <link rel="manifest" href="images/placeholders/site.webmanifest">
+  <meta name="theme-color" content="#1e3a8a">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    /* Full-width Hero Image Section - No Cropping (SAME AS CONTACT) */
+  .about-hero-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 3rem;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.about-hero-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensures full image is visible */
+  display: block;
+}
+
+/* Overlay positioned much lower on image */
+.about-hero-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%; /* Reduced from full height to 20% - much lower */
+  background: linear-gradient(to top, rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.3), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem; /* Less padding = closer to bottom */
+}
+
+.about-hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 0 2rem;
+  max-width: 800px;
+}
+
+.about-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.about-hero-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Mobile Responsive - Maintains aspect ratio */
+@media (max-width: 768px) {
+  .about-hero-overlay {
+    height: 25%;
+    padding-bottom: 0.75rem;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .about-hero-content {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-overlay {
+    height: 30%;
+    padding-bottom: 0.5rem;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .about-hero-content p {
+    font-size: 1rem;
+  }
+  
+  .about-hero-content {
+    padding: 0 1rem;
+  }
+}
+
+
+    .story-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    }
+    
+    .story-content h3 {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      position: relative;
+    }
+    
+    .story-content h3::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary-color);
+      border-radius: 2px;
+    }
+    
+    .story-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--dark-gray-color);
+    }
+    
+    .highlight-text {
+      background: linear-gradient(135deg, var(--secondary-color), #e65100);
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+      display: inline-block;
+      margin: 0.2rem;
+    }
+    
+    .team-image-container {
+      position: relative;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(30, 58, 138, 0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .team-image-container:hover {
+      transform: scale(1.02) translateY(-5px);
+    }
+    
+    .team-image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(30, 58, 138, 0.1), rgba(249, 115, 22, 0.1));
+      z-index: 1;
+    }
+    
+    .mission-vision-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    
+    .mvv-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(30, 58, 138, 0.1);
+      border: 1px solid rgba(249, 115, 22, 0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .mvv-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.05) 0%, transparent 70%);
+      transition: all 0.3s ease;
+    }
+    
+    .mvv-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px rgba(30, 58, 138, 0.2);
+    }
+    
+    .mvv-card:hover::before {
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+    }
+    
+    .mvv-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--secondary-color), #e65100);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .mvv-card h5 {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .mvv-card p {
+      color: var(--dark-gray-color);
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .stats-showcase {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      border-radius: 25px;
+      padding: 4rem 2rem;
+      margin: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stats-showcase::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: statsFloat 20s linear infinite;
+    }
+    
+    @keyframes statsFloat {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .stats-showcase h3 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      font-size: 2.2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .stat-item {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .stat-label {
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    
+    .testimonial-section {
+      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 25px;
+      padding: 4rem 2rem;
+      margin: 4rem 0;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(30, 58, 138, 0.1);
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 1rem;
+      box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+      position: relative;
+      border-left: 5px solid var(--secondary-color);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark-gray-color);
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+      color: white;
+      padding: 4rem 2rem;
+      border-radius: 25px;
+      text-align: center;
+      margin: 4rem 0;
+    }
+    
+    .cta-section h4 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .btn-cta {
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid white;
+      color: white;
+      font-weight: 600;
+      padding: 1rem 2.5rem;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      margin: 0.5rem;
+    }
+    
+    .btn-cta:hover {
+      background: white;
+      color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .about-hero-content {
+        padding: 2rem 1.5rem;
+      }
+      
+      .about-hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .about-hero-content p {
+        font-size: 1.1rem;
+      }
+      
+      .story-section {
+        padding: 3rem 2rem;
+      }
+      
+      .mission-vision-values {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-showcase {
+        padding: 3rem 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 3rem 1.5rem;
+      }
+      
+      .cta-section h4 {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .about-hero-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/placeholders/AR_GROUP_LOGO.png" alt="AR Group Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="programsDropdown" data-bs-toggle="dropdown">Programs</a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+              <li><a class="dropdown-item" href="engineering.html">Engineering & Technology</a></li>
+              <li><a class="dropdown-item" href="medical.html">Medical, Nursing & Paramedical</a></li>
+              <li><a class="dropdown-item" href="management.html">Management & Commerce</a></li>
+              <li><a class="dropdown-item" href="media-communication.html">Media & Communication</a></li>
+              <li><a class="dropdown-item" href="law-education.html">Law & Education</a></li>
+              <li><a class="dropdown-item" href="arts-science.html">Arts, Science, Agriculture & Hospitality</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-Width Hero Image Section -->
+  <section class="about-hero-section">
+    <img src="images/placeholders/about_page_header.webp" alt="About AR Group - Excellence in Education Consulting" class="about-hero-image">
+    <div class="about-hero-overlay">
+      <div class="about-hero-content">
+        <h1>About AR Group Of Institution</h1>
+
+        <p>Transforming educational dreams into reality through personalized guidance, expert counseling, and unwavering support</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="container">
+    <div class="story-section">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="story-content">
+            <h3><i class="fas fa-book-open me-2" style="color: var(--secondary-color);"></i>Our Story</h3>
+            <p>At <span class="highlight-text">AR Group Of Institution</span>, we believe that every student deserves the opportunity to pursue their educational dreams, regardless of their financial background.</p>
+            <p>For over <span class="highlight-text">12 years</span>, we have been the bridge between ambitious students and prestigious educational institutions across India. Our journey began with a simple yet powerful vision: to make quality education accessible to all.</p>
+            <p>We specialize in comprehensive admission guidance, helping students navigate through the complex world of higher education while securing maximum financial support through scholarships and government schemes.</p>
+            <p>Our expert team works exclusively with institutions recognized by <span class="highlight-text">AICTE, UGC, MHRD, NBA, NAAC, NIRF, PCI, INC, and DCI</span>, ensuring that every student receives authentic and valuable educational opportunities.</p>
+            <p><strong><i class="fas fa-certificate me-2"></i>Registration No.:</strong> <span class="highlight-text">060030169</span></p>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="team-image-container">
+            <img src="images/placeholders/OFFICE_TEAM_IMAGE.jpg" alt="Our Team" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values -->
+  <section class="container">
+    <div class="mission-vision-values">
+      <div class="mvv-card">
+        <div class="mvv-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h5>Our Mission</h5>
+        <p>To provide <strong>quality education guidance</strong> and make higher education accessible to every student through scholarship opportunities, expert counseling, and personalized support that transforms dreams into achievements.</p>
+      </div>
+      <div class="mvv-card">
+        <div class="mvv-icon">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h5>Our Vision</h5>
+        <p>To become the <strong>leading educational consultancy</strong> in India, helping thousands of students achieve their academic dreams and career goals while building a more educated and empowered society.</p>
+      </div>
+      <div class="mvv-card">
+        <div class="mvv-icon">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h5>Our Values</h5>
+        <p><strong>Integrity</strong>, Excellence, Student-first approach, Innovation in education, Transparency in processes, and unwavering commitment to making education accessible to all students.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Statistics -->
+  <section class="container">
+    <div class="stats-showcase">
+      <h3><i class="fas fa-trophy me-3"></i>Why Students Choose Us</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">15,000+</div>
+          <div class="stat-label">Students Guided Successfully</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Scholarship Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Partner Colleges & Universities</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8</div>
+          <div class="stat-label">States Coverage</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Placement Assistance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Testimonials -->
+  <section class="testimonials-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">
+        <i class="fas fa-star me-2" style="color: var(--secondary-color);"></i>
+        What Our Students Say
+      </h2>
+      
+      <div class="testimonials-slider">
+        <div class="testimonials-track">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-slide active">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"AR Group helped me secure admission in top engineering college with complete BSCC support. No financial burden on my family!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">PS</div>
+                <div class="author-info">
+                  <h6>Priya Sharma</h6>
+                  <small>B.Tech Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Got 100% scholarship for GNM through AR Group's guidance. They knew exactly which scholarships I was eligible for."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">RK</div>
+                <div class="author-info">
+                  <h6>Rahul Kumar</h6>
+                  <small>GNM Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Best counseling service in Bihar! They guided me through the entire admission process and scholarship applications perfectly."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AJ</div>
+                <div class="author-info">
+                  <h6>Anjali Jha</h6>
+                  <small>B.Pharmacy Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"AR Group made my MBA dream come true with proper guidance and scholarship support. Highly recommended for all students!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">VT</div>
+                <div class="author-info">
+                  <h6>Vikash Thakur</h6>
+                  <small>MBA Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Professional team with excellent knowledge of scholarships. They helped me get into nursing college with full financial support."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SM</div>
+                <div class="author-info">
+                  <h6>Sita Mishra</h6>
+                  <small>B.Sc Nursing Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Amazing support for law admission! AR Group helped me understand all scholarship options and secured my seat in top law college."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">DK</div>
+                <div class="author-info">
+                  <h6>Deepak Kumar</h6>
+                  <small>LLB Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 7 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Best decision was to consult AR Group for my son's engineering admission. Their BSCC guidance saved us lakhs of rupees!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MP</div>
+                <div class="author-info">
+                  <h6>Manoj Prasad</h6>
+                  <small>Parent, Begusarai</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 8 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Excellent counseling for management courses. They guided me to the right college with perfect scholarship matching."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">NK</div>
+                <div class="author-info">
+                  <h6>Neha Kumari</h6>
+                  <small>BBA Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 9 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"AR Group's team is highly knowledgeable and supportive. They made my polytechnic admission process smooth and hassle-free."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">ST</div>
+                <div class="author-info">
+                  <h6>Suraj Tiwari</h6>
+                  <small>Diploma Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 10 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p class="testimonial-text">"Trustworthy and reliable service! They helped me get into agriculture college with complete scholarship coverage. Very grateful!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">RD</div>
+                <div class="author-info">
+                  <h6>Ravi Das</h6>
+                  <small>B.Sc Agriculture Student</small>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- Navigation Dots -->
+        <div class="testimonials-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+          <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container">
+    <div class="cta-section">
+      <h4><i class="fas fa-rocket me-2"></i>Ready to Start Your Educational Journey?</h4>
+      <p class="mb-4">Join thousands of successful students who trusted us with their educational dreams. Let's make your aspirations a reality!</p>
+      <a href="contact.html" class="btn btn-cta">
+        <i class="fas fa-phone me-2"></i>Get Free Counseling
+      </a>
+      <a href="scholarships.html" class="btn btn-cta">
+        <i class="fas fa-graduation-cap me-2"></i>Explore Scholarships
+      </a>
+      <a href="https://wa.me/919304631413" class="btn btn-cta">
+        <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer py-4">
+  <div class="container text-center">
+    <div class="footer-meta mb-2">
+      &copy; 2025 <a href="index.html" class="footer-link">AR Group Of Institution</a>
+      <span class="footer-sep">|</span>
+      <strong>www.argroupofinstitution.com</strong>
+      <span class="footer-sep">|</span>
+      Reg: <b>060030169</b>
+    </div>
+    <div class="footer-powered mb-1">
+      Website designed & developed by <a href="mailto:harshbca065@gmail.com" class="footer-link">Harsh</a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">Home</a>
+      <span class="footer-sep">|</span>
+      <a href="about.html" class="footer-link">About</a>
+      <span class="footer-sep">|</span>
+      <a href="programs.html" class="footer-link">Programs</a>
+      <span class="footer-sep">|</span>
+      <a href="scholarships.html" class="footer-link">Scholarships</a>
+      <span class="footer-sep">|</span>
+      <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

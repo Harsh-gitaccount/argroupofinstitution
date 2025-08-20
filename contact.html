@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:url" content="https://argroupofinstitution.com/contact.html">
+  <link rel="canonical" href="https://argroupofinstitution.com/contact.html">
+
+  <title>Contact Us - AR Group Of Institution</title>
+  
+  <!-- Favicon for all browsers and devices -->
+  <link rel="icon" type="image/x-icon" href="images/placeholders/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/placeholders/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/placeholders/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/placeholders/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/placeholders/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/placeholders/android-chrome-512x512.png">
+  <link rel="manifest" href="images/placeholders/site.webmanifest">
+  <meta name="theme-color" content="#1e3a8a">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+  /* Full-width Hero Image Section - No Cropping */
+  .contact-hero-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 3rem;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.contact-hero-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Ensures full image is visible */
+  display: block;
+}
+
+/* Overlay positioned much lower on image */
+.contact-hero-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20%; /* Reduced from full height to 20% - much lower */
+  background: linear-gradient(to top, rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.3), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem; /* Less padding = closer to bottom */
+}
+
+.contact-hero-content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 0 2rem;
+  max-width: 800px;
+}
+
+.contact-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.contact-hero-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Mobile Responsive - Maintains aspect ratio */
+@media (max-width: 768px) {
+  .contact-hero-overlay {
+    height: 25%;
+    padding-bottom: 0.75rem;
+  }
+  
+  .contact-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-hero-content {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-overlay {
+    height: 30%;
+    padding-bottom: 0.5rem;
+  }
+  
+  .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-hero-content p {
+    font-size: 1rem;
+  }
+  
+  .contact-hero-content {
+    padding: 0 1rem;
+  }
+}
+
+    
+    .contact-form-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 
+        0 20px 40px rgba(30, 58, 138, 0.1),
+        0 8px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(249, 115, 22, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-form-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+    
+    .contact-info-card {
+      background: linear-gradient(145deg, var(--primary-color) 0%, #1e40af 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 
+        0 20px 40px rgba(30, 58, 138, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-info-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, transparent 70%);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    
+    .form-label {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-control,
+    .form-select {
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.25);
+      background: white;
+    }
+    
+    .contact-info-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .contact-info-item:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--secondary-color), #e65100);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+    }
+    
+    .contact-info-item h6 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .contact-info-item p,
+    .contact-info-item a {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0.25rem;
+    }
+    
+    .contact-info-item a:hover {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .btn-whatsapp:hover {
+      background: linear-gradient(135deg, #128c7e, #075e54);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      color: white;
+    }
+    
+    .btn-submit {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .btn-submit:hover {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+      color: white;
+    }
+    
+    .office-image {
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(30, 58, 138, 0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .office-image:hover {
+      transform: scale(1.02);
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .contact-hero-image {
+        max-height: 250px;
+        margin-bottom: 2rem;
+      }
+      
+      .contact-form-card,
+      .contact-info-card {
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/placeholders/AR_GROUP_LOGO.png" alt="AR Group Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="programsDropdown" data-bs-toggle="dropdown">Programs</a>
+            <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+              <li><a class="dropdown-item" href="engineering.html">Engineering & Technology</a></li>
+              <li><a class="dropdown-item" href="medical.html">Medical, Nursing & Paramedical</a></li>
+              <li><a class="dropdown-item" href="management.html">Management & Commerce</a></li>
+              <li><a class="dropdown-item" href="media-communication.html">Media & Communication</a></li>
+              <li><a class="dropdown-item" href="law-education.html">Law & Education</a></li>
+              <li><a class="dropdown-item" href="arts-science.html">Arts, Science, Agriculture & Hospitality</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-Width Hero Image Section -->
+<section class="contact-hero-section">
+  <img src="images/placeholders/contact_page_header.jpg" alt="Contact AR Group - Professional Education Consulting" class="contact-hero-image">
+  <div class="contact-hero-overlay">
+    <div class="contact-hero-content">
+      <h1>Get In Touch With Us</h1>
+      <p>Ready to start your educational journey? Our expert counselors are here to guide you!</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Main Contact Section -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="contact-form-card">
+          <h4 class="mb-4">
+            <i class="fas fa-paper-plane me-2" style="color: var(--secondary-color);"></i>
+            Send Us a Message
+          </h4>
+          <form id="contactForm">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">
+                  <i class="fas fa-user me-2"></i>Full Name *
+                </label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">
+                  <i class="fas fa-phone me-2"></i>Phone Number *
+                </label>
+                <input type="tel" class="form-control" id="phone" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">
+                  <i class="fas fa-envelope me-2"></i>Email Address
+                </label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="course" class="form-label">
+                  <i class="fas fa-graduation-cap me-2"></i>Course Interest *
+                </label>
+                <select class="form-select" id="course" required>
+                  <option value="">Select Course Category</option>
+                  <option value="Engineering & Technology">Engineering & Technology</option>
+                  <option value="Medical, Nursing & Paramedical">Medical, Nursing & Paramedical</option>
+                  <option value="Management & Commerce">Management & Commerce</option>
+                  <option value="Media & Communication">Media & Communication</option>
+                  <option value="Law & Education">Law & Education</option>
+                  <option value="Arts, Science & Agriculture">Arts, Science & Agriculture</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="qualification" class="form-label">
+                  <i class="fas fa-certificate me-2"></i>Current Qualification
+                </label>
+                <select class="form-select" id="qualification">
+                  <option value="">Select Qualification</option>
+                  <option value="10th">10th Pass</option>
+                  <option value="12th">12th Pass/Appearing</option>
+                  <option value="graduate">Graduate</option>
+                  <option value="postgraduate">Post Graduate</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="scholarship" class="form-label">
+                  <i class="fas fa-award me-2"></i>Scholarship Interest
+                </label>
+                <select class="form-select" id="scholarship">
+                  <option value="">Select Option</option>
+                  <option value="bscc">Bihar Student Credit Card.</option>
+                  <option value="national">National Scholarships.</option>
+                  <option value="state">State Scholarships.</option>
+                  <option value="all">All Scholarship Options.</option>
+                  <option value="no scholarship">No Scholarship.</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">
+                <i class="fas fa-comment me-2"></i>Message
+              </label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your educational goals and requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit me-3">
+              <i class="fab fa-whatsapp me-2"></i>Send via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="contact-info-card">
+          <h4 class="mb-4 text-white">
+            <i class="fas fa-info-circle me-2"></i>Contact Information
+          </h4>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h6>Managing Director</h6>
+            <p>Abhinav Roy</p>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h6>Office Address</h6>
+            <p>Govind Complex, Narepur, Bachhwara<br>Begusarai, Bihar 851111</p>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h6>Phone Numbers</h6>
+            <p>
+              <a href="tel:+919304631413">+91 9304631413</a><br>
+              <a href="tel:+919931723199">+91 9931723199</a><br>
+              <a href="tel:+918340620061">+91 8340620061</a>
+            </p>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h6>Email</h6>
+            <p><a href="mailto:arconsultancy1907@gmail.com">arconsultancy1907@gmail.com</a></p>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h6>Office Hours</h6>
+            <p>Monday - Saturday<br>10:00 AM - 6:00 PM IST</p>
+          </div>
+          
+           <div class="contact-info-item">
+  <div class="contact-icon">
+    <i class="fas fa-globe"></i>
+  </div>
+  <div class="contact-details">
+    <h6>Website</h6>
+    <p><a href="https://argroupofinstitution.com">www.argroupofinstitution.com</a></p>
+  </div>
+</div>
+
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h6>Registration</h6>
+            <p>060030169</p>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="https://wa.me/919304631413" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp me-2"></i>WhatsApp Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <h4 class="mb-4">Visit Our Office</h4>
+      <img src="images/placeholders/OFFICE_EXTERIOR_IMAGE.jpg" alt="AR Group Office" class="office-image img-fluid" style="max-height: 400px;">
+    </div>
+  </section>
+
+  <footer class="footer py-4">
+  <div class="container text-center">
+    <div class="footer-meta mb-2">
+      &copy; 2025 <a href="index.html" class="footer-link">AR Group Of Institution</a>
+      <span class="footer-sep">|</span>
+      <strong>www.argroupofinstitution.com</strong>
+      <span class="footer-sep">|</span>
+      Reg: <b>060030169</b>
+    </div>
+    <div class="footer-powered mb-1">
+      Website designed & developed by <a href="mailto:harshbca065@gmail.com" class="footer-link">Harsh</a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">Home</a>
+      <span class="footer-sep">|</span>
+      <a href="about.html" class="footer-link">About</a>
+      <span class="footer-sep">|</span>
+      <a href="programs.html" class="footer-link">Programs</a>
+      <span class="footer-sep">|</span>
+      <a href="scholarships.html" class="footer-link">Scholarships</a>
+      <span class="footer-sep">|</span>
+      <a href="contact.html" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
