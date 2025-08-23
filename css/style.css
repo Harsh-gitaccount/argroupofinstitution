@@ -2049,3 +2049,123 @@ body {
     justify-content: center;
   }
 }
+* enquiry button style */
+
+/* Vertical Quick Enquiry Button - THINNER VERSION */
+.quick-enquiry-vertical-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-weight: 600;
+  font-size: 11px; /* SMALLER TEXT */
+  padding: 30px 8px; /* LESS PADDING */
+  width: 35px; /* THINNER WIDTH */
+  height: 150px; /* SHORTER HEIGHT */
+  border-radius: 20px 0 0 20px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: -3px 0 15px rgba(5, 150, 105, 0.3);
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-enquiry-vertical-btn:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  transform: translateY(-50%) translateX(-5px);
+  box-shadow: -5px 0 20px rgba(5, 150, 105, 0.4);
+}
+
+.enquiry-text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 1px; /* REDUCED SPACING */
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+
+/* Modal Styles */
+.enquiry-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.enquiry-modal.active {
+  display: flex;
+}
+
+.enquiry-modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 28px;
+  color: #1e3a8a;
+  cursor: pointer;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-modal:hover {
+  color: #ef4444;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .quick-enquiry-vertical-btn {
+    font-size: 14px;
+    padding: 15px 10px;
+  }
+  
+  .enquiry-text-vertical {
+    letter-spacing: 2px;
+  }
+  
+  .enquiry-modal-content {
+    width: 98%;
+    padding: 20px;
+  }
+}
