@@ -132,18 +132,118 @@
     </div>
 
   <div class="floating-btn floating-btn-brochure" data-tooltip="Download Brochure">
-  <a href="images/placeholders/brochure.pdf" download>
-    <i class="fas fa-file-pdf"></i>
-    <span class="btn-text">Download Brochure</span>
-  </a>
+   <a href="images/placeholders/brochure.pdf" download>
+     <i class="fas fa-file-pdf"></i>
+     <span class="btn-text">Download Brochure</span>
+   </a>
+   </div>
+  </div>
+  <!-- Vertical Quick Enquiry Button -->
+<div class="quick-enquiry-vertical-btn" onclick="openEnquiryPopup()">
+  <div class="enquiry-text-vertical">
+    Quick Enquiry
+  </div>
 </div>
 
 
-
-
-
-
+<!-- Enquiry Form Popup Modal -->
+<div id="enquiryModal" class="enquiry-modal">
+  <div class="enquiry-modal-content">
+    <span class="close-modal" onclick="closeEnquiryPopup()">&times;</span>
+    <section class="container my-3">
+      <div class="contact-form-card">
+        <h4 class="mb-4">
+          <i class="fas fa-paper-plane me-2" style="color: #1e3a8a;"></i>
+          Send Us a Message
+        </h4>
+        <form id="contactFormPopup" onsubmit="return showSuccessMsg(event)">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="namePopup" class="form-label">
+                <i class="fas fa-user me-2"></i>Full Name *
+              </label>
+              <input type="text" class="form-control" id="namePopup" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phonePopup" class="form-label">
+                <i class="fas fa-phone me-2"></i>Phone Number *
+              </label>
+              <input type="tel" class="form-control" id="phonePopup" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="emailPopup" class="form-label">
+                <i class="fas fa-envelope me-2"></i>Email Address
+              </label>
+              <input type="email" class="form-control" id="emailPopup">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="coursePopup" class="form-label">
+                <i class="fas fa-graduation-cap me-2"></i>Course Interest *
+              </label>
+              <select class="form-select" id="coursePopup" required>
+                <option value="">Select Course Category</option>
+                <option value="Engineering & Technology">Engineering & Technology</option>
+                <option value="Medical, Nursing & Paramedical">Medical, Nursing & Paramedical</option>
+                <option value="Management & Commerce">Management & Commerce</option>
+                <option value="Media & Communication">Media & Communication</option>
+                <option value="Law & Education">Law & Education</option>
+                <option value="Arts, Science & Agriculture">Arts, Science & Agriculture</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="qualificationPopup" class="form-label">
+                <i class="fas fa-certificate me-2"></i>Current Qualification
+              </label>
+              <select class="form-select" id="qualificationPopup">
+                <option value="">Select Qualification</option>
+                <option value="10th">10th Pass</option>
+                <option value="12th">12th Pass/Appearing</option>
+                <option value="graduate">Graduate</option>
+                <option value="postgraduate">Post Graduate</option>
+              </select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="scholarshipPopup" class="form-label">
+                <i class="fas fa-award me-2"></i>Scholarship Interest
+              </label>
+              <select class="form-select" id="scholarshipPopup">
+                <option value="">Select Option</option>
+                <option value="bscc">Bihar Student Credit Card</option>
+                <option value="national">National Scholarships</option>
+                <option value="state">State Scholarships</option>
+                <option value="all">All Scholarship Options</option>
+                <option value="no scholarship">No Scholarship</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label for="messagePopup" class="form-label">
+              <i class="fas fa-comment me-2"></i>Message
+            </label>
+            <textarea class="form-control" id="messagePopup" rows="4" placeholder="Tell us about your educational goals and requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn" style="background: #1e3a8a; color: white; padding: 12px 24px; border-radius: 8px;">
+            <i class="fas fa-paper-plane me-2"></i>Submit Enquiry
+          </button>
+        </form>
+        <div id="enquiry-success" class="success-msg" style="display:none;">
+          <div style="text-align:center; color:#1e3a8a; font-size:1.3em; margin-top:30px;">
+            <i class="fas fa-check-circle" style="font-size:2em; color:#10b981;"></i><br><br>
+            <strong>Thank you!</strong><br>
+            Your enquiry has been submitted successfully.<br>
+            Our AR Group experts will reach out to you soon.
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+</div>
+
 
   <section class="hero-section">
     <div class="hero-slideshow">
