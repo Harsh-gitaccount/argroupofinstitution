@@ -230,3 +230,84 @@ document.addEventListener('DOMContentLoaded', function() {
   showSlide(0);
   startSlideshow();
 });
+// enquiry code
+
+
+function openEnquiryPopup() {
+  document.getElementById('enquiryModal').classList.add('active');
+  document.getElementById('contactFormPopup').style.display = 'block';
+  document.getElementById('enquiry-success').style.display = 'none';
+  // Reset form
+  document.getElementById('contactFormPopup').reset();
+}
+
+function closeEnquiryPopup() {
+  document.getElementById('enquiryModal').classList.remove('active');
+}
+
+function showSuccessMsg(event) {
+  event.preventDefault();
+  
+  // Get all form data
+  const name = document.getElementById('namePopup').value;
+  const phone = document.getElementById('phonePopup').value;
+  const email = document.getElementById('emailPopup').value || 'Not provided';
+  const course = document.getElementById('coursePopup').value || 'Not selected';
+  const qualification = document.getElementById('qualificationPopup').value || 'Not selected';
+  const scholarship = document.getElementById('scholarshipPopup').value || 'Not selected';
+  const message = document.getElementById('messagePopup').value || 'No message';
+  
+  // Validate required fields
+  if (!name || !phone || !course) {
+    alert('Please fill in all required fields: Name, Phone, and Course Interest');
+    return false;
+  }
+  
+  // Create WhatsApp message with proper formatting
+  const whatsappMessage = 
+    `🎓 *NEW ENQUIRY - AR GROUP OF INSTITUTION*%0A%0A` +
+    `👤 *Name:* ${name}%0A` +
+    `📱 *Phone:* ${phone}%0A` +
+    `📧 *Email:* ${email}%0A` +
+    `🎯 *Course Interest:* ${course}%0A` +
+    `📚 *Current Qualification:* ${qualification}%0A` +
+    `🏆 *Scholarship Interest:* ${scholarship}%0A` +
+    `💬 *Message:* ${message}%0A%0A` +
+    `🌐 *Source:* argroupofinstitution.com`;
+  
+  // YOUR WHATSAPP NUMBER (Replace with your actual number)
+  const whatsappNumber = '+919304631413'; // Replace with your actual WhatsApp number
+  
+  // Create WhatsApp URL
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  
+  // Open WhatsApp
+  window.open(whatsappURL, '_blank');
+  
+  // Show success message
+  document.getElementById('contactFormPopup').style.display = 'none';
+  document.getElementById('enquiry-success').style.display = 'block';
+  
+  // Auto close after 4 seconds
+  setTimeout(function() {
+    closeEnquiryPopup();
+  }, 4000);
+  
+  return false;
+}
+
+// Close modal when clicking outside or pressing Escape
+window.onclick = function(event) {
+  const modal = document.getElementById('enquiryModal');
+  if (event.target == modal) {
+    closeEnquiryPopup();
+  }
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === "Escape") {
+    closeEnquiryPopup();
+  }
+});
+
+
