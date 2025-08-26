@@ -231,13 +231,10 @@ document.addEventListener('DOMContentLoaded', function() {
   startSlideshow();
 });
 // enquiry code
-
-
 function openEnquiryPopup() {
   document.getElementById('enquiryModal').classList.add('active');
   document.getElementById('contactFormPopup').style.display = 'block';
   document.getElementById('enquiry-success').style.display = 'none';
-  // Reset form
   document.getElementById('contactFormPopup').reset();
 }
 
@@ -249,13 +246,14 @@ function showSuccessMsg(event) {
   event.preventDefault();
   
   // Get all form data
-  const name = document.getElementById('namePopup').value;
-  const phone = document.getElementById('phonePopup').value;
-  const email = document.getElementById('emailPopup').value || 'Not provided';
-  const course = document.getElementById('coursePopup').value || 'Not selected';
+  const name = document.getElementById('namePopup').value.trim();
+  const phone = document.getElementById('phonePopup').value.trim();
+  const email = document.getElementById('emailPopup').value.trim() || 'Not provided';
+  const course = document.getElementById('coursePopup').value.replace(/&/g, 'and') || 'Not selected'; // FIX AMPERSAND
   const qualification = document.getElementById('qualificationPopup').value || 'Not selected';
   const scholarship = document.getElementById('scholarshipPopup').value || 'Not selected';
-  const message = document.getElementById('messagePopup').value || 'No message';
+  const message = document.getElementById('messagePopup').value.trim() || 'No message';
+  const referredBy = document.getElementById('referredByPopup').value.trim() || 'Not provided';
   
   // Validate required fields
   if (!name || !phone || !course) {
@@ -263,32 +261,34 @@ function showSuccessMsg(event) {
     return false;
   }
   
-  // Create WhatsApp message with proper formatting
+  // Clean WhatsApp message - REPLACE ALL AMPERSANDS
   const whatsappMessage = 
-    `🎓 *NEW ENQUIRY - AR GROUP OF INSTITUTION*%0A%0A` +
-    `👤 *Name:* ${name}%0A` +
-    `📱 *Phone:* ${phone}%0A` +
-    `📧 *Email:* ${email}%0A` +
-    `🎯 *Course Interest:* ${course}%0A` +
-    `📚 *Current Qualification:* ${qualification}%0A` +
-    `🏆 *Scholarship Interest:* ${scholarship}%0A` +
-    `💬 *Message:* ${message}%0A%0A` +
-    `🌐 *Source:* argroupofinstitution.com`;
+    `AR GROUP ENQUIRY%0A%0A` +
+    `Name: ${name}%0A` +
+    `Phone: ${phone}%0A` +
+    `Email: ${email}%0A` +
+    `Course: ${course}%0A` +
+    `Qualification: ${qualification}%0A` +
+    `Scholarship: ${scholarship}%0A` +
+    `Referred By: ${referredBy}%0A` +
+    `Message: ${message}%0A%0A` +
+    `Website: argroupofinstitution.com`;
   
-  // YOUR WHATSAPP NUMBER (Replace with your actual number)
-  const whatsappNumber = '+919304631413'; // Replace with your actual WhatsApp number
-  
-  // Create WhatsApp URL
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  console.log('📱 Final WhatsApp Message:', whatsappMessage);
+  console.log('📏 Message Length:', whatsappMessage.length);
   
   // Open WhatsApp
+  const whatsappNumber = '+919304631413';
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  
+  console.log('🔗 WhatsApp URL Length:', whatsappURL.length);
+  
   window.open(whatsappURL, '_blank');
   
   // Show success message
   document.getElementById('contactFormPopup').style.display = 'none';
   document.getElementById('enquiry-success').style.display = 'block';
   
-  // Auto close after 4 seconds
   setTimeout(function() {
     closeEnquiryPopup();
   }, 4000);
@@ -296,7 +296,7 @@ function showSuccessMsg(event) {
   return false;
 }
 
-// Close modal when clicking outside or pressing Escape
+// Close modal handlers
 window.onclick = function(event) {
   const modal = document.getElementById('enquiryModal');
   if (event.target == modal) {
@@ -309,5 +309,4 @@ document.addEventListener('keydown', function(event) {
     closeEnquiryPopup();
   }
 });
-
 
